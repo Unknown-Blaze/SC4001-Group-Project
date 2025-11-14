@@ -16,7 +16,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Results Summary](#results-summary)
-- [Academic Submission Guidelines](#academic-submission-guidelines)
 - [References](#references)
 - [Contributors](#contributors)
 
@@ -552,59 +551,6 @@ Failure patterns observed in cross-domain evaluation:
 
 **Implication**: Further gains require discourse-level modeling and pragmatic reasoning beyond current token-level architectures.
 
-## 📝 Academic Submission Guidelines
-
-### For Course Instructors and Reviewers
-
-This repository accompanies our academic report (see `main.tex`) submitted for SC4001: Neural Networks and Deep Learning. All experiments are fully reproducible using the provided code and instructions.
-
-### Repository Contents Checklist
-
-#### ✅ Essential Files (Included)
-- [x] `README.md` - Comprehensive documentation (this file)
-- [x] `main.tex` - Full academic report with methodology, results, and analysis
-- [x] `requirements.txt` - Python dependencies with pinned versions
-- [x] `data/processed/` - Preprocessed datasets (train/eval/test splits)
-- [x] `fine_tuning/` - Method A implementation (all baselines)
-- [x] `lora/` - Method B implementation (LoRA + fusion + TENT)
-- [x] Model checkpoints - Best models from hyperparameter search
-- [x] Training logs - Complete training history and metrics
-
-#### ❌ Excluded Files (Not Needed for Reproduction)
-- Development artifacts (`__pycache__/`, `.ipynb_checkpoints/`)
-- Intermediate checkpoints (only final best models retained)
-- Debug logs (only essential training logs kept)
-
-### Reproducibility Statement
-
-All experiments in this work are reproducible given:
-1. **Fixed random seed**: 42 (set in all scripts)
-2. **Identical datasets**: Provided in `data/processed/`
-3. **Hyperparameter configurations**: Saved in `models/*/best_hyperparameters.json`
-4. **Software versions**: Pinned in `requirements.txt`
-
-Expected variance in metrics: ±0.1-0.3 percentage points due to GPU non-determinism in CUDA operations.
-
----
-
-### How to Cite This Work
-
-For academic purposes:
-
-```bibtex
-@misc{sentiment_lora_cross_domain_2025,
-  title={Traditional Fine-tuning vs LoRA for Cross-Domain Sentiment Analysis},
-  author={[Student Names]},
-  year={2025},
-  school={Nanyang Technological University},
-  course={SC4001: Neural Networks and Deep Learning},
-  note={Comparative study of ERM baselines vs parameter-efficient LoRA 
-        with domain fusion and test-time adaptation for sentiment classification}
-}
-```
-
----
-
 ### Key Results for Report
 
 **Main Findings to Highlight**:
@@ -717,16 +663,16 @@ To validate our results:
 ## 👥 Contributors
 
 **Project Team**:
-- [Student Name 1] - [Matriculation Number] - [Email]
-- [Student Name 2] - [Matriculation Number] - [Email]
-- [Student Name 3] - [Matriculation Number] - [Email]
+- Ganesh Rudra Prasadh
+- Chidambaram Aditya Somasundaram
+- Pahwa Ronak
 
 **Course Information**:
 - **Course**: SC4001 - Neural Networks and Deep Learning
 - **Institution**: Nanyang Technological University
 - **School**: College of Computing and Data Science
-- **Academic Year**: 2024/2025
-- **Submission Date**: [Submission Date]
+- **Academic Year**: 2025-26
+- **Submission Date**: 14 November, 2025
 
 ---
 
@@ -758,21 +704,6 @@ Special thanks to the research community for making datasets and pre-trained mod
 
 ---
 
-## 📞 Contact and Support
-
-For questions regarding this project:
-
-- **Primary Contact**: [Your Email]
-- **Project Repository**: [GitHub URL if applicable]
-- **Course Page**: [Link to course website]
-
-For technical issues:
-- Check `TRAINING_README.md` in `fine_tuning/` directory for detailed troubleshooting
-- Review training logs in model output directories
-- Verify GPU availability and CUDA installation
-
----
-
 ## 🔄 Version History
 
 - **v1.0** (November 2025): Initial submission
@@ -780,10 +711,6 @@ For technical issues:
   - Comprehensive evaluation on IMDB, Yelp, and Amazon datasets
   - TENT adaptation experiments
   - Full documentation and reproducibility materials
-
----
-
-**Document Last Updated**: November 2025
 
 ---
 
@@ -824,6 +751,3 @@ ls lora/outputs/*.pt
 ```
 
 ---
-
-*This README provides comprehensive documentation for academic evaluation and reproducibility. For questions or clarifications, please contact the project team.*
-
