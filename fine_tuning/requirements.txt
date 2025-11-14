@@ -1,0 +1,23 @@
+# Core packages
+pandas==2.1.4
+numpy==1.26.2
+matplotlib==3.8.2
+seaborn==0.13.0
+scikit-learn==1.3.2
+
+# Deep Learning
+torch==2.1.0
+transformers==4.35.2
+sentence-transformers==2.2.2
+
+# Datasets and Preprocessing
+datasets==2.14.0
+
+# Hyperparameter Optimization
+optuna==3.5.0
+
+# Parameter-Efficient Fine-Tuning (for LoRA)
+peft==0.6.0
+
+# Utilities
+tqdm==4.66.1

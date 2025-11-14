@@ -1,0 +1,46 @@
+{
+  "total_samples": 66000,
+  "train": {
+    "total": 48000,
+    "imdb": 24000,
+    "yelp": 24000,
+    "positive": 23970,
+    "negative": 24030
+  },
+  "eval": {
+    "total": 12000,
+    "imdb": 6000,
+    "yelp": 6000,
+    "positive": 6030,
+    "negative": 5970
+  },
+  "amazon_test": {
+    "total": 6000,
+    "positive": 2952,
+    "negative": 3048
+  },
+  "separate_datasets": {
+    "imdb": {
+      "train": 24000,
+      "eval": 6000,
+      "total": 30000
+    },
+    "yelp": {
+      "train": 24000,
+      "eval": 6000,
+      "total": 30000
+    },
+    "amazon": {
+      "train": 24000,
+      "eval": 6000,
+      "total": 30000
+    }
+  },
+  "config": {
+    "seed": 42,
+    "eval_ratio": 0.2,
+    "samples_per_dataset": 30000,
+    "max_length": 256,
+    "note": "IMDB uses 25k train + 5k test (matches LoRA), Yelp and Amazon sample from train only"
+  }
+}
