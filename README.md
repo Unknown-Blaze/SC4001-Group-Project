@@ -96,7 +96,9 @@ sentiment-analysis-sc4001/
         └── metrics/                   # Training curves & metrics
 ```
 
-## � Methodology
+## Methodology
+
+(Note that under the fine_tuning subfolder, first refers to the pre-processing, second refers to the training script, and third refers to the evaluation ipynb) 
 
 Our experimental design follows a rigorous protocol to ensure fair comparison and reproducibility:
 
