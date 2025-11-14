@@ -676,44 +676,6 @@ To validate our results:
 
 ---
 
-## 📄 License and Usage
-
-This project is submitted as academic coursework for SC4001 at Nanyang Technological University.
-
-**Usage Terms**:
-- ✅ For academic and educational purposes
-- ✅ Reference implementation for sentiment analysis research
-- ❌ Not for commercial use
-- ❌ Requires attribution if used in derivative work
-
-**Code License**: MIT License (see individual files for details)
-**Report**: Copyright © 2025, Project Team. All rights reserved.
-
----
-
-## 🙏 Acknowledgments
-
-We would like to thank:
-- **Course Instructor**: [Professor Name] - For guidance on deep learning methodologies
-- **Teaching Assistants**: [TA Names] - For technical support and feedback
-- **Hugging Face Team**: For providing pre-trained models and PEFT library
-- **PyTorch Team**: For the deep learning framework
-- **Optuna Contributors**: For hyperparameter optimization tools
-
-Special thanks to the research community for making datasets and pre-trained models publicly available.
-
----
-
-## 🔄 Version History
-
-- **v1.0** (November 2025): Initial submission
-  - Complete implementation of Method A (3 baselines) and Method B (LoRA + fusion)
-  - Comprehensive evaluation on IMDB, Yelp, and Amazon datasets
-  - TENT adaptation experiments
-  - Full documentation and reproducibility materials
-
----
-
 ## Appendix: Quick Reference Commands
 
 ### Setup
