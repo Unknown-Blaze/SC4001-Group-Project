@@ -51,9 +51,9 @@ def build_fusion_model(imdb_dir: str,
 
 def predict_sentence(
     text: str,
-    imdb_dir: str = "outputs/imdb_adapter",
-    yelp_dir: str = "outputs/yelp_adapter",
-    fusion_weights_path: str = "outputs/fusion_model/fusion_model_tta.pt",
+    imdb_dir: str = "models/imdb_adapter",
+    yelp_dir: str = "models/yelp_adapter",
+    fusion_weights_path: str = "models/fusion_model/fusion_model_tta.pt",
 ):
     tokenizer = get_e5_tokenizer()
     fusion_model = build_fusion_model(imdb_dir, yelp_dir, fusion_weights_path)
@@ -82,10 +82,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--text", type=str, required=True,
                         help="Input sentence to classify")
-    parser.add_argument("--imdb_dir", type=str, default="outputs/imdb_adapter")
-    parser.add_argument("--yelp_dir", type=str, default="outputs/yelp_adapter")
+    parser.add_argument("--imdb_dir", type=str, default="models/imdb_adapter")
+    parser.add_argument("--yelp_dir", type=str, default="models/yelp_adapter")
     parser.add_argument("--fusion_weights", type=str,
-                        default="outputs/fusion_model/fusion_model_tta.pt")
+                        default="models/fusion_model/fusion_model_tta.pt")
     args = parser.parse_args()
 
     label, probs = predict_sentence(

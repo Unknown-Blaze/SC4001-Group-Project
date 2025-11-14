@@ -1,0 +1,85 @@
+{
+  "evaluation_summary": {
+    "datasets_evaluated": {
+      "in_domain": [
+        "IMDB",
+        "Yelp"
+      ],
+      "cross_domain": [
+        "Amazon"
+      ],
+      "total_samples": {
+        "imdb": 6000,
+        "yelp": 6000,
+        "amazon": 6000
+      }
+    },
+    "models_evaluated": 3,
+    "model_names": [
+      "TF-IDF + FFNN",
+      "E5 Classifier",
+      "Fine-tuned BERT"
+    ],
+    "notes": "All models evaluated successfully"
+  },
+  "best_models": {
+    "imdb": {
+      "model": "bert",
+      "f1_score": 0.9241972856669975,
+      "all_scores": {
+        "tfidf_ffnn": 0.887041564792176,
+        "e5_classifier": 0.9236076885165106,
+        "bert": 0.9241972856669975
+      }
+    },
+    "yelp": {
+      "model": "e5_classifier",
+      "f1_score": 0.9595776274542155,
+      "all_scores": {
+        "tfidf_ffnn": 0.9029947916666666,
+        "e5_classifier": 0.9595776274542155,
+        "bert": 0.9501562757032407
+      }
+    },
+    "in_domain": {
+      "model": "e5_classifier",
+      "f1_score": 0.9415541652946987,
+      "all_scores": {
+        "tfidf_ffnn": 0.8950240247577164,
+        "e5_classifier": 0.9415541652946987,
+        "bert": 0.9372164012870225
+      }
+    },
+    "amazon_cross_domain": {
+      "model": "e5_classifier",
+      "f1_score": 0.9307601151176571,
+      "all_scores": {
+        "tfidf_ffnn": 0.8053820278712158,
+        "e5_classifier": 0.9307601151176571,
+        "bert": 0.9294564678671733
+      }
+    }
+  },
+  "domain_adaptation": {
+    "tfidf_ffnn": {
+      "in_domain_f1": 0.8950240247577164,
+      "cross_domain_f1": 0.8053820278712158,
+      "drop_percentage": 10.015596722196
+    },
+    "e5_classifier": {
+      "in_domain_f1": 0.9415541652946987,
+      "cross_domain_f1": 0.9307601151176571,
+      "drop_percentage": 1.1464077771524865
+    },
+    "bert": {
+      "in_domain_f1": 0.9372164012870225,
+      "cross_domain_f1": 0.9294564678671733,
+      "drop_percentage": 0.8279766987851489
+    }
+  },
+  "overall_winner": {
+    "model": "E5 Classifier",
+    "cross_domain_f1": 0.9307601151176571,
+    "reason": "Best cross-domain (domain adaptation) performance"
+  }
+}
