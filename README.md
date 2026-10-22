@@ -1,9 +1,14 @@
 # Traditional Fine-tuning vs LoRA for Cross-Domain Sentiment Analysis
+
+NTU SC4001 group project comparing full fine-tuning with domain-specific LoRA adapters joined by a fusion gate for sentiment classification, trained on IMDB and Yelp and tested cross-domain on Amazon reviews.
+
+<img src="fine_tuning/outputs/comparison/metrics_comparison.png" alt="Accuracy, precision, recall and F1 of each model on IMDB, Yelp, in-domain and Amazon cross-domain test sets" width="100%">
+
 ## SC4001: Neural Networks and Deep Learning - Academic Project
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red.svg)](https://pytorch.org/)
-[![License: Academic](https://img.shields.io/badge/License-Academic-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg?style=flat-square)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red.svg?style=flat-square)](https://pytorch.org/)
+[![License: Academic](https://img.shields.io/badge/License-Academic-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ---
 
