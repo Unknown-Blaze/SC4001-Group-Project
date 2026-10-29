@@ -2,27 +2,55 @@
 
 NTU SC4001 group project comparing full fine-tuning with domain-specific LoRA adapters joined by a fusion gate for sentiment classification, trained on IMDB and Yelp and tested cross-domain on Amazon reviews.
 
-<img src="fine_tuning/outputs/comparison/metrics_comparison.png" alt="Accuracy, precision, recall and F1 of each model on IMDB, Yelp, in-domain and Amazon cross-domain test sets" width="100%">
-
-## SC4001: Neural Networks and Deep Learning - Academic Project
-
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg?style=flat-square)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red.svg?style=flat-square)](https://pytorch.org/)
+![NTU SC4001](https://img.shields.io/badge/NTU-SC4001%20Neural%20Networks-1F3A93?style=flat-square)
 [![License: Academic](https://img.shields.io/badge/License-Academic-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
+<img src="fine_tuning/outputs/comparison/metrics_comparison.png" alt="Accuracy, precision, recall and F1 of each model on IMDB, Yelp, in-domain and Amazon cross-domain test sets" width="100%">
+
+## What it does
+
+Trains five sentiment classifiers on pooled IMDB and Yelp reviews and tests them in-domain and on Amazon reviews the models never saw. Method A is pooled training (TF-IDF + FFNN, frozen E5 + linear head, full BERT fine-tuning). Method B trains one LoRA adapter per domain on a frozen E5 backbone, combines them with a learned fusion gate, and adapts only that gate at test time with entropy minimisation (TENT). The fusion model reached 0.9482 Macro-F1 in-domain and 0.9427 on Amazon with under 1% of BERT's trainable parameters (full tables under [Results Summary](#-results-summary)).
+
+## Tech
+
+Python, PyTorch 2.1, Hugging Face Transformers and Datasets, PEFT (LoRA), Optuna, scikit-learn, Jupyter.
+
+## Run
+
+The guide further down refers to `train_all_models.py` and `train_method_b_e5.py`; in this repository those trainers are `fine_tuning/second.py` (Method A) and `lora/train.py` (Method B).
+
+```bash
+pip install -r requirements.txt
+
+cd fine_tuning
+jupyter notebook first.ipynb     # preprocessing; writes data/processed/ (already committed)
+python second.py                 # Method A: TF-IDF, E5 and BERT baselines -> fine_tuning/models/
+jupyter notebook third.ipynb     # evaluation and figures -> fine_tuning/outputs/
+
+cd ../lora
+python train.py                  # Method B: LoRA adapters, fusion gate, TENT -> lora/outputs/
+python inference.py --text "Great value and it arrived early"   # needs the trained adapters
+```
+
+A CUDA GPU is recommended; trained checkpoints are not committed.
+
+## SC4001: Neural Networks and Deep Learning - Academic Project
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
+- [Overview](#-overview)
 - [Research Questions](#research-questions)
-- [Project Structure](#project-structure)
+- [Project Structure](#-project-structure)
 - [Methodology](#methodology)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results Summary](#results-summary)
-- [References](#references)
-- [Contributors](#contributors)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Results Summary](#-results-summary)
+- [References](#-references)
+- [Contributors](#-contributors)
 
 ---
 

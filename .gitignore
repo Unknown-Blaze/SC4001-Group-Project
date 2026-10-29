@@ -3,3 +3,10 @@ models/
 __pycache__/
 *.log
 lora/outputs/
+# Python and notebooks
+.ipynb_checkpoints/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
