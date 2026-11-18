@@ -5,7 +5,6 @@ NTU SC4001 group project comparing full fine-tuning with domain-specific LoRA ad
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg?style=flat-square)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red.svg?style=flat-square)](https://pytorch.org/)
 ![NTU SC4001](https://img.shields.io/badge/NTU-SC4001%20Neural%20Networks-1F3A93?style=flat-square)
-[![License: Academic](https://img.shields.io/badge/License-Academic-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 <img src="fine_tuning/outputs/comparison/metrics_comparison.png" alt="Accuracy, precision, recall and F1 of each model on IMDB, Yelp, in-domain and Amazon cross-domain test sets" width="100%">
 
@@ -90,7 +89,7 @@ All datasets use stratified sampling with balanced positive/negative labels and 
 ## 📁 Project Structure
 
 ```
-sentiment-analysis-sc4001/
+SC4001-Group-Project/
 ├── README.md                          # This file
 ├── main.tex                           # Full academic report (LaTeX)
 ├── requirements.txt                   # Python dependencies
@@ -268,8 +267,8 @@ Configuration:
 ### Step 1: Clone Repository
 
 ```bash
-git clone <repository-url>
-cd sentiment-analysis-sc4001
+git clone https://github.com/Unknown-Blaze/SC4001-Group-Project.git
+cd SC4001-Group-Project
 ```
 
 ### Step 2: Create Virtual Environment
@@ -615,7 +614,7 @@ To validate our results:
 
 1. **Quick validation** (~1 hour):
    ```bash
-   # Use provided checkpoints and evaluate
+   # Evaluate trained checkpoints (none are committed; train them first)
    cd fine_tuning
    jupyter notebook third.ipynb  # Run evaluation cells
    ```
@@ -667,7 +666,7 @@ To validate our results:
 
 **Pre-trained Language Models**:
 - Devlin et al., "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding", *NAACL 2019*
-- Wang et al., "Text Embeddings by Weakly-Supervised Contrastive Pre-training" (E5), *arXiv:2405.01089*, 2024
+- Wang et al., "Text Embeddings by Weakly-Supervised Contrastive Pre-training" (E5), *arXiv:2212.03533*, 2022
 - Reimers & Gurevych, "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks", *EMNLP 2019*
 
 **Domain Adaptation Theory**:
